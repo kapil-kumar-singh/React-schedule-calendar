@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from "react-router-dom";
+import Dashboard from './components/Dashboard/Dashboard';
+import Something from './components/Something/Something';
+
+
+const CI = ["Flooring", "Paint", "Brickwork", "Electrical", "Plumbing"]
+const CC = { Flooring:"red", Paint:"green", Brickwork:"brown", Electrical:"blue", Plumbing:"Purple"}
+const AE = []
+localStorage.setItem('CC', JSON.stringify(CC));
+localStorage.setItem('CI', JSON.stringify(CI));
+localStorage.setItem('AllEvents', JSON.stringify(AE));
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/something" component={Something} />
+      </Switch>
+    </>
   );
 }
-
 export default App;
