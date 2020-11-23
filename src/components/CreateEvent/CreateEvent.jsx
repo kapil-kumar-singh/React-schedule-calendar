@@ -92,8 +92,8 @@ const CreateEvent = (props) => {
         // console.log("dis ", discription);
 
         
-        if(SD === undefined || ED === undefined){
-            alert('Please select startDate/EndDate')
+        if(SD === undefined || ED === undefined || ST===undefined){
+            alert('Please select startDate/EndDate/startTime')
         }else{
             let secTime = ST.slice(0,2)
             let date = new Date()
