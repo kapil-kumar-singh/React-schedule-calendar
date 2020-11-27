@@ -119,8 +119,8 @@ const Cal = (props) => {
         <div className="month">
           <div className='arrow prev'> <ArrowBackIosIcon style={{fontSize:"x-small"}} /> </div>
           <div className='date'>
-            <h1></h1>
-            <p></p>
+            <h1>''</h1>
+            <p>''</p>
           </div>
           <div className='arrow next'> <ArrowForwardIosIcon style={{fontSize:"x-small"}} /> </div>
         </div>
