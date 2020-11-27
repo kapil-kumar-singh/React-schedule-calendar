@@ -5,7 +5,7 @@ import Something from './components/Something/Something';
 
 
 const CI = ["Flooring", "Paint", "Brickwork", "Electrical", "Plumbing"]
-const CC = { Flooring:"red", Paint:"green", Brickwork:"brown", Electrical:"blue", Plumbing:"Purple"}
+const CC = { Flooring:"red", Paint:"yellow", Brickwork:"blue", Electrical:"blue", Plumbing:"Purple"}
 const AE = []
 localStorage.setItem('CC', JSON.stringify(CC));
 localStorage.setItem('CI', JSON.stringify(CI));
