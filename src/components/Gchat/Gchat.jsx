@@ -33,7 +33,7 @@ const Gchat = (props) => {
                     days += `<div class="gc_day" id="${y}-${m}-${cd}">${cd}</div>`;
                     cd += 1
                 }
-                if(m == 12){
+                if(m === 12){
                     m =1
                 }else{
                     m+=1

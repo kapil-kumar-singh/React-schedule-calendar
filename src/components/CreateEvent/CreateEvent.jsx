@@ -111,13 +111,13 @@ const CreateEvent = (props) => {
                 alert("Again fill Category");
             }else if(emp_p.innerText === "Select"){
                 alert("Again Select Name");
-            }else if(SD === undefined || (currY-secSY < 0) || (currM-secSM > 0) || (currM-secSM==0)?(currD-secSD > 0):false ){
+            }else if(SD === undefined || (currY-secSY < 0) || (currM-secSM > 0) || (currM-secSM===0)?(currD-secSD > 0):false ){
                 alert("Again Select StarDate which shuold be greater than curr date"); 
             }else if(ST === undefined ){
                 alert("Again Select StarTime ");
             }else if(ET === undefined){
                 alert("Again Select EndTime");
-            }else if(ED === undefined || (currY-secEY < 0) || (currM-secEM > 0) || (currM-secEM==0)?(currD-secED > 0):false ){
+            }else if(ED === undefined || (currY-secEY < 0) || (currM-secEM > 0) || (currM-secEM===0)?(currD-secED > 0):false ){
                 alert("Again Select EndDate which shuold be greater than curr date");
             }else if(title === ""){
                 alert("Please Enter Title");
@@ -137,7 +137,7 @@ const CreateEvent = (props) => {
                 // console.log('allEvents :->',allEvents)
                 const cateName = JSON.parse(localStorage.getItem("CI"))
                 cateName.forEach((n)=>{
-                    const arr = allEvents.filter((i)=>{ return (i.cate == n) });
+                    const arr = allEvents.filter((i)=>{ return (i.cate === n) });
                     const count = arr.length
                     document.getElementById(`${n}`).innerText = count
                 })
